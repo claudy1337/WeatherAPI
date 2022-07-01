@@ -31,7 +31,7 @@ namespace WeatherApi.Services
 
         public async Task<WeatherModel> GetWeather(string city)
         {
-            Uri uri = new Uri($"{Constants.RestUrl}?q={city}&appid=3d7883d9904c2338e550e11a64a9d7a7&units=metric");
+            Uri uri = new Uri($"{Constants.RestUrl}?q={city}&appid={APIKEY.Key}&units=metric");
             try
             {
                 Debug.WriteLine("Start Requests");
